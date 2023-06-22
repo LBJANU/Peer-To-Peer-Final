@@ -2,7 +2,7 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image} from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen ({ navigation }) {
   return (
     <ImageBackground
     source = {require('./assets/background2.png')}
@@ -16,7 +16,7 @@ export default function HomeScreen() {
 
        </Image>
        <Text style = {styles.text}>Learn More. Teach More. Help More.</Text>
-       <TouchableOpacity style = {{borderRadius: 20}}>
+       <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")} style = {{borderRadius: 20}}>
         <Text style = {styles.signup}>Sign Up</Text>
        </TouchableOpacity>
        <TouchableOpacity style = {{borderRadius: 20}}>
