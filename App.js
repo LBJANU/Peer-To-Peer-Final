@@ -1,5 +1,6 @@
 import HomeScreen from "./HomeScreen";
 import SignUpScreen from "./SignUpScreen";
+import ProfilePage from "./ProfilePage";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -20,6 +21,12 @@ export default function App() {
         <Stack.Screen
           name = "SignUpScreen"
           component= {SignUpScreen}
+          />
+
+
+        <Stack.Screen
+          name = "Create Your Profile"
+          component = {ProfilePage}
           />
       </Stack.Navigator>
 

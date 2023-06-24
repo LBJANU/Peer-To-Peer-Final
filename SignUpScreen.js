@@ -4,12 +4,16 @@ import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Image} from 
 import CustomInput from './CustomInput';
 import CustomButton from './CustomButton';
 
-export default function SignUpScreen() {
+export default function SignUpScreen({navigation}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const onSignUpPress = () => {
     console.warn("Sign In");
+  }
+
+  const onSignUpNavigation = () => {
+    navigation.navigate("Create Your Profile");
   }
   return (
     
@@ -29,7 +33,7 @@ export default function SignUpScreen() {
      <CustomInput placeholder= "Username" value = {username} setValue={setUsername}/> 
      <CustomInput placeholder= "Password" value = {password} setValue={setPassword} secureTextEntry={true}/> 
 
-     <CustomButton text = "Sign in" onPress={onSignUpPress} />
+     <CustomButton text = "Sign in" onPress={() => {onSignUpPress(); onSignUpNavigation(); }} />
    
      </View>
 
