@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground, ScrollView, FlatList} from 'react-native';
+import Checkbox from 'expo-checkbox';
 import ProfileInputs from './ProfileInputs';
+import ProfileDropDownVals from './ProfileDropDownVals';
 
 export default function ProfilePage()
  {
   const [name, setName] = useState('');
   const [grade, setGrade] = useState('');
+  const [isSelected, setSelection] = useState('');
   return (
+    <ScrollView>
     <ImageBackground
-    source = {require('./assets/background2.png')}
+     source = {require('./assets/white.jpg')}
     style = {styles.background}
     resizeMode= "cover">
 
@@ -17,25 +21,57 @@ export default function ProfilePage()
         source={require('./assets/circle.gif')}
         style={styles.profileImage}
       />
-      <Text style={styles.name}>John Doe</Text>
-      <Text style={styles.bio}>Software Developer</Text>
-      <Text style={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
-        semper neque. Suspendisse potenti. Fusce nec vestibulum ex.
-      </Text>
 
+
+    
+      <Text style={styles.name}>Name:</Text>
       <ProfileInputs placeholder= "Name" value = {name} setValue={setName}/> 
-    </View>
+      
+      <Text style={styles.grade}>Grade:</Text>
+      <ProfileInputs placeholder= "Grade" value = {grade} setValue={setGrade}/> 
+    
+     <View style = {styles.checkboxtext}>
+   
+      <Checkbox
+       value={isSelected}
+       onValueChange={setSelection}
+       style={styles.checkbox}
+     />
+   
+   
+      <Text style={styles.description}> Mentee </Text>
+      </View>
+
+      <View style = {styles.checkbox2}>
+   
+      <Checkbox
+       value={isSelected}
+       onValueChange={setSelection}
+       style={styles.checkbox}
+     />
+   
+   
+      <Text style={styles.description}> Mentor </Text>
+      </View>
+      
+        
+      <ProfileDropDownVals/>
+    
+      
+      </View>
+
     </ImageBackground>
+    </ScrollView>
+
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    // alignItems: 'center',
     // justifyContent: 'center',
-    padding: 16,
+    padding: 18,
   },
   background: {
     flex: 1,
@@ -45,21 +81,40 @@ const styles = StyleSheet.create({
     height: 150,
     borderRadius: 75,
     marginBottom: 16,
+    alignSelf: 'center',
+    marginTop: 40
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   name: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 8,
+    marginBottom: 0,
+    marginTop: 20
   },
-  bio: {
-    fontSize: 18,
-    marginBottom: 8,
+  grade: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
   description: {
     fontSize: 16,
     textAlign: 'center',
     marginHorizontal: 16,
   },
+  checkboxtext: {
+    flexDirection: 'row',
+  },
+  checkbox2: {
+    flexDirection: 'row',
+    margin: '0%',
+  },
+  checkbox: {
+    margin: '0%',
+    textAlign: 'center',
+    padding: 10,
+    marginBottom: '6%'
+    
+  }
 });
 
 

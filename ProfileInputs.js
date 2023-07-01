@@ -17,20 +17,22 @@ export default function ProfileInputs({value, setValue, placeholder}) {
 
   const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#e9e9e9',
     width: '100%',
-    marginTop: '10%',
+    marginTop: '4%',
+    marginBottom: '8%',
    
     borderColor: '#e8e8e8',
-    borderWidth: 1,
-    borderRadius: 5,
+    borderWidth: 4,
+    borderRadius: 25,
 
     paddingHorizontal: 10,
     paddingVertical: 4,
     
   },
   input: {
-    margin: '3%'
+    margin: '3%',
+    borderRadius: 5
   }
 
 })
