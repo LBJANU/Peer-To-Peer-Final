@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, Image, ImageBackground, ScrollView, FlatList} from 'react-native';
+import { View, Text, StyleSheet, Image, ImageBackground, ScrollView, FlatList, TouchableOpacity} from 'react-native';
 import Checkbox from 'expo-checkbox';
 import ProfileInputs from './ProfileInputs';
 import ProfileDropDownVals from './ProfileDropDownVals';
@@ -9,6 +9,7 @@ export default function ProfilePage()
   const [name, setName] = useState('');
   const [grade, setGrade] = useState('');
   const [isSelected, setSelection] = useState('');
+  const [isSelected2, setSelection2] = useState('');
   return (
     <ScrollView>
     <ImageBackground
@@ -45,8 +46,8 @@ export default function ProfilePage()
       <View style = {styles.checkbox2}>
    
       <Checkbox
-       value={isSelected}
-       onValueChange={setSelection}
+       value={isSelected2}
+       onValueChange={setSelection2}
        style={styles.checkbox}
      />
    
@@ -56,6 +57,11 @@ export default function ProfilePage()
       
         
       <ProfileDropDownVals/>
+
+      <TouchableOpacity onPress= {() => console.warn("Saved")} style = {{borderRadius: 20}}>
+        <Text style = {styles.save}>Save</Text>
+
+      </TouchableOpacity>
     
       
       </View>
@@ -114,6 +120,17 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: '6%'
     
+  },
+  save: {
+    backgroundColor: 'white',
+    color: '#3A59FF',
+    width: "75%",
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginLeft: '11%',
+    padding: "2%",
+    fontSize:  27,
+    marginTop: '3%'
   }
 });
 

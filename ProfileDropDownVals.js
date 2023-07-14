@@ -67,7 +67,7 @@ export default function ProfileDropDownVals() {
   return (
     <View style={{ margin: 8 }}>
       <View style={{ width: '100%', alignItems: 'baseline' }}>
-        <Text style={{ fontSize: 30, paddingBottom: 10, fontWeight: 'bold' }}>Choose Your Subjects:</Text>
+        <Text style={{ fontSize: 24, paddingBottom: 10, fontWeight: 'bold' }}>Choose Your Subjects:</Text>
       </View>
       <View style={{ height: 0 }} />
 

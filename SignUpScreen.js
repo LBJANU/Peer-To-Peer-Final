@@ -9,7 +9,7 @@ export default function SignUpScreen({navigation}) {
   const [password, setPassword] = useState('');
 
   const onSignUpPress = () => {
-    console.warn("Sign In");
+    //console.warn("Sign In");
   }
 
   const onSignUpNavigation = () => {
