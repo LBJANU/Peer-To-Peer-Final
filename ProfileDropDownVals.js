@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Text, View } from 'react-native'
-import SelectBox from 'react-native-multi-selectbox'
 import { xorBy } from 'lodash'
 
 // Options data must contain 'item' & 'id' keys
@@ -71,14 +70,14 @@ export default function ProfileDropDownVals() {
       </View>
       <View style={{ height: 0 }} />
 
-      <SelectBox
+      {/* <SelectBox
         label="Select multiple"
         options={K_OPTIONS}
         selectedValues={selectedTeams}
         onMultiSelect={onMultiChange()}
         onTapClose={onMultiChange()}
         isMulti
-      />
+      /> */}
     </View>
   )
 
