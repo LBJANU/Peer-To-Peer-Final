@@ -19,7 +19,7 @@ export default function HomeScreen ({ navigation }) {
        <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")} style = {{borderRadius: 20}}>
         <Text style = {styles.signup}>Sign Up</Text>
        </TouchableOpacity>
-       <TouchableOpacity style = {{borderRadius: 20}}>
+       <TouchableOpacity onPress={() => navigation.navigate("SignInScreen")} style = {{borderRadius: 20}}>
         <Text style = {styles.login}>Log In</Text>
        </TouchableOpacity>
     </View>
