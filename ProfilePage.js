@@ -4,7 +4,7 @@ import Checkbox from 'expo-checkbox';
 import ProfileInputs from './ProfileInputs';
 import ProfileDropDownVals from './ProfileDropDownVals';
 
-export default function ProfilePage()
+export default function ProfilePage({navigation})
  {
   const [name, setName] = useState('');
   const [grade, setGrade] = useState('');
@@ -54,12 +54,12 @@ export default function ProfilePage()
    
       <Text style={styles.description}> Mentor </Text>
       </View>
-      
+  
         
       <ProfileDropDownVals/>
-
-      <TouchableOpacity onPress= {() => console.warn("Saved")} style = {{borderRadius: 20}}>
-        <Text style = {styles.save}>Save</Text>
+     
+      <TouchableOpacity onPress= {() => navigation.navigate("Onboarding")} style = {{borderRadius: 20}}>
+        <Text style = {styles.save}>Find Peers</Text>
 
       </TouchableOpacity>
     
