@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View, FlatList, Image, useWindowDimensions, TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View, FlatList, Image, useWindowDimensions, TouchableOpacity, Platform, Linking} from 'react-native'
 import React from 'react'
 
 
 export default OnboardingItem = ({item}) => {
   const {width} = useWindowDimensions();
-  
+   const openEmail = () => {
+    Linking.openURL("mailto: andrewshen@gmail.com");
+   }
     return (
     <View style = {[styles.container, {width}]}>
         <Image source = {item.image} style = {[styles.image, {width, resizeMode: "contain" }]}/>
@@ -12,7 +14,7 @@ export default OnboardingItem = ({item}) => {
         <View style = {{flex: 0.3}}>
             <Text style = {styles.title}>{item.title}</Text>
             <Text style = {styles.description}>{item.description}</Text>
-            <TouchableOpacity onPress={() => console.warn("Peer Chosen")} style = {{borderRadius: 20}}>
+            <TouchableOpacity onPress={() => openEmail()} style = {{borderRadius: 20}}>
         <Text style = {styles.name}>Choose Peer</Text>
        </TouchableOpacity>
 
