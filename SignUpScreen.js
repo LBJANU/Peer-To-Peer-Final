@@ -55,7 +55,7 @@ export default function SignUpScreen({navigation}) {
      <CustomInput placeholder= "Username" value = {email} setValue={setEmail}/> 
      <CustomInput placeholder= "Password" value = {password2} setValue={setPassword2} secureTextEntry={true}/> 
 
-     <CustomButton text = "Sign in" onPress={() => {onSignUpPress(); onSignUpNavigation(); handleSignUp(); }} />
+     <CustomButton text = "Sign Up" onPress={() => {onSignUpPress(); onSignUpNavigation(); handleSignUp(); }} />
    
      </View>
 
