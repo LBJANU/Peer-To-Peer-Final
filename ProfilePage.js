@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
   save: {
     backgroundColor: 'white',
-    color: '#3A59FF',
+    color: '#196472',
     width: "75%",
     textAlign: 'center',
     fontWeight: 'bold',

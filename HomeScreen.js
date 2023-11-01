@@ -11,7 +11,7 @@ export default function HomeScreen ({ navigation }) {
 
     <View>
       <Image
-        source = {require('./assets/logo3.jpeg')}
+        source = {require('./assets/peertopeer.png')}
         style = {styles.logo}>
 
        </Image>
@@ -50,16 +50,17 @@ const styles = StyleSheet.create({
   },
   text:{
     marginTop: '-0%',
-    marginLeft: '14.5%',
+    marginLeft: '8.5%',
     alignContent: 'center',
     justifyContent: 'center',
-    color: '#92cdcd',
-    fontSize: 18
+    color: '#196472',
+    fontSize: 21,
+    fontWeight: 'bold'
 
   },
   signup: {
     backgroundColor: 'white',
-    color: '#3A59FF',
+    color: '#196472',
     width: "75%",
     textAlign: 'center',
     fontWeight: 'bold',
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     marginTop: '105%'
   },
   login: {
-    backgroundColor: '#3A59FF',
+    backgroundColor: '#196472',
     color: 'white',
     width: "75%",
     borderRadius: 25,

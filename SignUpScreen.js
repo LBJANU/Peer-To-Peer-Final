@@ -45,7 +45,7 @@ export default function SignUpScreen({navigation}) {
     resizeMode= "cover">
 
       <Image
-        source = {require('./assets/logo3.jpeg')}
+        source = {require('./assets/peertopeer.png')}
         style = {styles.logo}>
 
        </Image>

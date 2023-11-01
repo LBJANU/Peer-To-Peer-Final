@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 64,
     },
     name: {
-    backgroundColor: '#3A59FF',
+    backgroundColor: '#196472',
     color: 'white',
     width: "75%",
     borderRadius: 25,
